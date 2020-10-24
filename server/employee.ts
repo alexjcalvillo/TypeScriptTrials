@@ -1,5 +1,5 @@
 export class Employee {
-  // ACCESS MODIFIERS
+  // ACCESS MODIFIERS -> "public" && "private"
   // A topic related to "encapsulation"
   public firstName: string;
   public lastName: string;
