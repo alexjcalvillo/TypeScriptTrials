@@ -1,4 +1,5 @@
 import { Employee } from './employee';
+import { Position } from './position';
 
 export class Company {
   private readonly NUM_OF_STARTING_EMPLOYEES: number = 10;
@@ -35,7 +36,12 @@ export class Company {
 
   // function signature says private method, method name, returns type "Employee"
   private createEmployee(): Employee {
-    const newEmployee = new Employee('Alex', 'Calvillo', 60000);
+    const newEmployee = new Employee(
+      'Alex',
+      'Calvillo',
+      60000,
+      Position.ANALYST
+    );
     return newEmployee;
   }
 }
