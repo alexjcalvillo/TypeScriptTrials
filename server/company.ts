@@ -1,4 +1,4 @@
-import { Employee } from "./employee";
+import { Employee } from './employee';
 
 export class Company {
   // here we can "forward declare" variables
@@ -25,5 +25,5 @@ export class Company {
     this.randomEvent();
   }
 
-  randomEvent() {};
+  randomEvent() {}
 }
