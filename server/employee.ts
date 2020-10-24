@@ -1,4 +1,4 @@
-import { Position } from './position';
+import { Position } from './modules/Enums/position';
 
 export class Employee {
   // ACCESS MODIFIERS -> "public" && "private"
@@ -18,5 +18,25 @@ export class Employee {
     this.lastName = lastName;
     this.salary = salary;
     this.position = position;
+  }
+
+  public getFirstName(): string {
+    return this.firstName;
+  }
+
+  public getLastName(): string {
+    return this.lastName;
+  }
+
+  public getSalary(): number {
+    return this.salary;
+  }
+
+  public getPosition(): Position {
+    return this.position;
+  }
+
+  public getFullName(): string {
+    return this.firstName + ' ' + this.lastName;
   }
 }

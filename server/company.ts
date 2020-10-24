@@ -1,5 +1,5 @@
 import { Employee } from './employee';
-import { Position } from './position';
+import { Position } from './modules/Enums/position';
 
 export class Company {
   private readonly NUM_OF_STARTING_EMPLOYEES: number = 10;
