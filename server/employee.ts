@@ -1,6 +1,6 @@
 import { Position } from './modules/Enums/position';
 
-export class Employee {
+export class Employee implements IPerson {
   // ACCESS MODIFIERS -> "public" && "private"
   // A topic related to "encapsulation"
   private firstName: string;
