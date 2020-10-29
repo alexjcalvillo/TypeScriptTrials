@@ -109,4 +109,53 @@ export class Company {
 
     this.employees.splice(randomEmployeeNumber, 1);
   }
+
+  public getFirstNames(): string[] {
+    const firstNames: string[] = [];
+
+    for (let i = 0; i < this.employees.length; i++) {
+      firstNames.push(this.employees[i].getFirstName());
+    }
+    return firstNames;
+  }
+
+  public getLastNames(): string[] {
+    const lastNames: string[] = [];
+
+    for (let i = 0; i < this.employees.length; i++) {
+      lastNames.push(this.employees[i].getLastName());
+    }
+    return lastNames;
+  }
+
+  public getFullNames(): string[] {
+    const fullNames: string[] = [];
+
+    for (let i = 0; i < this.employees.length; i++) {
+      fullNames.push(this.employees[i].getFullName());
+    }
+    return fullNames;
+  }
+
+  public getTotalSalaries(): number {
+    let totalSalary: number = 0;
+
+    for (let i = 0; i < this.employees.length; i++) {
+      totalSalary += this.employees[i].getSalary();
+    }
+    return totalSalary;
+  }
+
+  public getAllSalaries(): number[] {
+    let allSalaries: number[] = [];
+
+    for (let i = 0; i < this.employees.length; i++) {
+      allSalaries.push(this.employees[i].getSalary());
+    }
+    return allSalaries;
+  }
+
+  public getHistoryLog(): string[] {
+    return this.historyLog.getHistory();
+  }
 }

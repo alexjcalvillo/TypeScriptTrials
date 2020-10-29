@@ -90,6 +90,44 @@ var Company = /** @class */ (function () {
         }
         this.employees.splice(randomEmployeeNumber, 1);
     };
+    Company.prototype.getFirstNames = function () {
+        var firstNames = [];
+        for (var i = 0; i < this.employees.length; i++) {
+            firstNames.push(this.employees[i].getFirstName());
+        }
+        return firstNames;
+    };
+    Company.prototype.getLastNames = function () {
+        var lastNames = [];
+        for (var i = 0; i < this.employees.length; i++) {
+            lastNames.push(this.employees[i].getLastName());
+        }
+        return lastNames;
+    };
+    Company.prototype.getFullNames = function () {
+        var fullNames = [];
+        for (var i = 0; i < this.employees.length; i++) {
+            fullNames.push(this.employees[i].getFullName());
+        }
+        return fullNames;
+    };
+    Company.prototype.getTotalSalaries = function () {
+        var totalSalary = 0;
+        for (var i = 0; i < this.employees.length; i++) {
+            totalSalary += this.employees[i].getSalary();
+        }
+        return totalSalary;
+    };
+    Company.prototype.getAllSalaries = function () {
+        var allSalaries = [];
+        for (var i = 0; i < this.employees.length; i++) {
+            allSalaries.push(this.employees[i].getSalary());
+        }
+        return allSalaries;
+    };
+    Company.prototype.getHistoryLog = function () {
+        return this.historyLog.getHistory();
+    };
     return Company;
 }());
 exports.Company = Company;
